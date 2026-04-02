@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --sp-body-bg: #f8fafc;
+    --sp-card-bg: #ffffff;
+    --sp-card-radius: 0.625rem;
+    --sp-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --sp-primary: #1e293b;
+    /* Deeper, more authoritative blue-gray */
+    --sp-accent: #3b82f6;
+    --sp-primary-light: #f1f5f9;
+    --sp-text-main: #0f172a;
+    --sp-text-muted: #64748b;
+    --sp-border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    background-color: var(--sp-body-bg) !important;
+    color: var(--sp-text-main);
+}
+
+.page-wrapper {
+    background-color: var(--sp-body-bg);
+}
+
+.body-wrapper {
+    background-color: var(--sp-body-bg) !important;
+    padding-bottom: 2rem;
+}
+
+/* Sidebar Refinement */
+.left-sidebar {
+    background-color: #ffffff !important;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.02) !important;
+    border-right: 1px solid var(--sp-border-color);
+}
+
+.sidebar-nav ul .sidebar-item .sidebar-link {
+    border-radius: 10px;
+    margin-bottom: 4px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav ul .sidebar-item .sidebar-link.active,
+.sidebar-nav ul .sidebar-item .sidebar-link:hover {
+    background-color: var(--sp-primary-light) !important;
+    color: var(--sp-primary) !important;
+}
+
+.sidebar-nav ul .sidebar-item .sidebar-link i {
+    font-size: 1.25rem;
+}
+
+/* Card Modernization */
+.card {
+    border: 1px solid var(--sp-border-color) !important;
+    border-radius: var(--sp-card-radius) !important;
+    box-shadow: var(--sp-card-shadow) !important;
+    background-color: var(--sp-card-bg) !important;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.card-body {
+    padding: 1.5rem !important;
+}
+
+.card-title {
+    color: var(--sp-text-main);
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+}
+
+/* Header Refinement */
+.app-header {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--sp-border-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+/* Badge Styling */
+.badge {
+    padding: 6px 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+}
+
+.bg-light-primary {
+    background-color: #ecf2ff !important;
+    color: #5d87ff !important;
+}
+
+.bg-light-success {
+    background-color: #e6fffa !important;
+    color: #13deb9 !important;
+}
+
+.bg-light-warning {
+    background-color: #fef5e5 !important;
+    color: #ffae1f !important;
+}
+
+.bg-light-danger {
+    background-color: #fdede8 !important;
+    color: #fa896b !important;
+}
+
+.bg-light-info {
+    background-color: #e8f7ff !important;
+    color: #539bff !important;
+}
+
+/* Table Styling */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #f8fafc;
+    border-top: none;
+    border-bottom: 2px solid var(--sp-border-color);
+    color: var(--sp-text-main);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    padding: 12px 20px;
+}
+
+.table tbody td {
+    padding: 16px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--sp-border-color);
+    color: var(--sp-text-main);
+    font-size: 0.875rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Button Refinement */
+.btn {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    box-shadow: 0 4px 10px rgba(93, 135, 255, 0.2);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 15px rgba(93, 135, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Custom Utilities for the redesign */
+.stats-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-muted {
+    color: var(--sp-text-muted) !important;
+}
+
+.fw-semibold {
+    font-weight: 600 !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--sp-text-main);
+}
+
+/* Glassmorphism effects for specific areas if needed */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
