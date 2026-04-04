@@ -2,8 +2,9 @@
 
 :root {
     /* Colors - Modern Palette */
-    --primary: #0d6efd;
-    --primary-light: #e7f1ff;
+    --primary: #0f1699;
+    --bs-primary: #0f1699;
+    --primary-light: #e7e8ff;
     --secondary: #6c757d;
     --success: #10b981;
     --success-light: #ecfdf5;

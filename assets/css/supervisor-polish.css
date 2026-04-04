@@ -5,7 +5,7 @@
     --sp-card-bg: #ffffff;
     --sp-card-radius: 0.625rem;
     --sp-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    --sp-primary: #1e293b;
+    --sp-primary: #0f1699;
     /* Deeper, more authoritative blue-gray */
     --sp-accent: #3b82f6;
     --sp-primary-light: #f1f5f9;
@@ -43,10 +43,19 @@ body {
     transition: all 0.3s ease;
 }
 
-.sidebar-nav ul .sidebar-item .sidebar-link.active,
 .sidebar-nav ul .sidebar-item .sidebar-link:hover {
     background-color: var(--sp-primary-light) !important;
     color: var(--sp-primary) !important;
+}
+
+.sidebar-nav ul .sidebar-item .sidebar-link.active {
+    background-color: #0f1699 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(15, 22, 153, 0.25);
+}
+
+.sidebar-nav ul .sidebar-item .sidebar-link.active i {
+    color: #ffffff !important;
 }
 
 .sidebar-nav ul .sidebar-item .sidebar-link i {
