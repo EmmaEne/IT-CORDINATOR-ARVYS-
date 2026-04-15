@@ -37,12 +37,7 @@
 
         <div class="nav-small-cap">Academics</div>
         <ul>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="batches.html">
-              <i class="ti ti-layers-intersect"></i>
-              <span>Batches</span>
-            </a>
-          </li>
+      
           <li class="sidebar-item">
             <a class="sidebar-link" href="live-sessions.html">
               <i class="ti ti-video"></i>
@@ -92,7 +87,7 @@
       <!-- Header -->
       <header class="app-header d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center gap-2">
-            <a href="attendance.html" class="btn btn-sm btn-light border-0"><i class="ti ti-arrow-left me-1"></i> Back</a>
+            <a href="attendance.html" class="btn btn-sm btn-outline-secondary rounded-pill px-3"><i class="ti ti-arrow-left me-1"></i> Back</a>
         </div>
         <div class="d-flex align-items-center gap-3">
           <div class="d-flex align-items-center gap-2">
@@ -110,39 +105,39 @@
       <main class="main-content">
         <div class="d-flex align-items-center justify-content-between mb-4">
           <div>
-            <h4 class="fw-bold mb-1" id="batch-title">Morning Batch Details</h4>
-            <p class="text-muted small mb-0">Today's Attendance Tracking - Tuesday, 14th April 2026</p>
+            <h4 class="fw-semibold mb-1" id="batch-title">Morning Batch Details</h4>
+            <p class="text-muted small mb-0">Today's Attendance Tracking — Tuesday, 14th April 2026</p>
           </div>
           <div class="d-flex gap-2">
-            <button class="btn btn-outline-secondary rounded-pill fw-bold"><i class="ti ti-download me-1"></i> Export PDF</button>
-            <button class="btn btn-primary rounded-pill fw-bold"><i class="ti ti-plus me-1"></i> Mark Attendance</button>
+            <button class="btn btn-outline-secondary rounded-pill fw-medium"><i class="ti ti-download me-1"></i> Export PDF</button>
+            <button class="btn btn-primary rounded-pill fw-medium"><i class="ti ti-plus me-1"></i> Mark Attendance</button>
           </div>
         </div>
 
         <!-- Batch Stats -->
         <div class="row g-4 mb-4">
             <div class="col-md-3">
-                <div class="card-modern p-3 border-start border-primary border-4">
-                    <div class="text-muted small fw-bold text-uppercase mb-1">Total Students</div>
-                    <div class="h4 fw-bold mb-0" id="total-students">32</div>
+                <div class="card-modern p-4 border-0 shadow-sm bg-white">
+                    <div class="text-muted small fw-medium text-uppercase mb-2" style="letter-spacing: 0.05em;">Total Students</div>
+                    <div class="h3 fw-bold mb-0" id="total-students" style="color: var(--gray-900);">32</div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card-modern p-3 border-start border-success border-4">
-                    <div class="text-muted small fw-bold text-uppercase mb-1">Present Today</div>
-                    <div class="h4 fw-bold mb-0" id="present-today">23</div>
+                <div class="card-modern p-4 border-0 shadow-sm bg-white">
+                    <div class="text-muted small fw-medium text-uppercase mb-2" style="letter-spacing: 0.05em;">Present Today</div>
+                    <div class="h3 fw-bold mb-0" id="present-today" style="color: var(--primary);">23</div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card-modern p-3 border-start border-danger border-4">
-                    <div class="text-muted small fw-bold text-uppercase mb-1">Absent Today</div>
-                    <div class="h4 fw-bold mb-0" id="absent-today">9</div>
+                <div class="card-modern p-4 border-0 shadow-sm bg-white">
+                    <div class="text-muted small fw-medium text-uppercase mb-2" style="letter-spacing: 0.05em;">Absent Today</div>
+                    <div class="h3 fw-bold mb-0" id="absent-today" style="color: var(--danger);">9</div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card-modern p-3 border-start border-warning border-4">
-                    <div class="text-muted small fw-bold text-uppercase mb-1">Average Attendance</div>
-                    <div class="h4 fw-bold mb-0" id="avg-attendance">84%</div>
+                <div class="card-modern p-4 border-0 shadow-sm bg-white">
+                    <div class="text-muted small fw-medium text-uppercase mb-2" style="letter-spacing: 0.05em;">Avg Attendance</div>
+                    <div class="h3 fw-bold mb-0" id="avg-attendance" style="color: var(--gray-900);">84%</div>
                 </div>
             </div>
         </div>
@@ -162,60 +157,60 @@
                 </thead>
                 <tbody id="batch-students-tbody">
                   <!-- Sample Data Rows -->
-                  <tr class="clickable-row" onclick="window.location.href='student-profile.html?id=CS/2021/001'">
+                  <tr class="clickable-row" onclick="window.location.href='students-overview.html?id=CS/2021/001'">
                     <td class="ps-4">
                         <div class="d-flex align-items-center gap-3">
                             <img src="../assets/images/profile/user-1.jpg" alt="" class="rounded-circle" width="35" height="35">
-                            <span class="fw-bold">Alice Smith</span>
+                            <span class="fw-medium">Alice Smith</span>
                         </div>
                     </td>
                     <td><span class="fw-semibold text-gray-700">CS/2021/001</span></td>
                     <td><span class="badge status-badge-present rounded-pill">Present</span></td>
                     <td><span class="fw-bold text-primary">28/30</span> <span class="text-muted small">days</span></td>
                     <td class="pe-4 text-end">
-                        <button class="btn btn-sm btn-light rounded-circle p-2" title="View Profile"><i class="ti ti-chevron-right"></i></button>
+                        <button class="btn btn-sm btn-light rounded-circle p-2" title="View Profile" onclick="window.location.href='students-overview.html?id=CS/2021/001'"><i class="ti ti-chevron-right"></i></button>
                     </td>
                   </tr>
-                  <tr class="clickable-row" onclick="window.location.href='student-profile.html?id=CS/2021/002'">
+                  <tr class="clickable-row" onclick="window.location.href='students-overview.html?id=CS/2021/002'">
                     <td class="ps-4">
                         <div class="d-flex align-items-center gap-3">
                             <img src="../assets/images/profile/user-1.jpg" alt="" class="rounded-circle" width="35" height="35">
-                            <span class="fw-bold">Bob Johnson</span>
+                            <span class="fw-medium">Bob Johnson</span>
                         </div>
                     </td>
                     <td><span class="fw-semibold text-gray-700">CS/2021/002</span></td>
                     <td><span class="badge status-badge-present rounded-pill">Present</span></td>
                     <td><span class="fw-bold text-primary">25/30</span> <span class="text-muted small">days</span></td>
                     <td class="pe-4 text-end">
-                        <button class="btn btn-sm btn-light rounded-circle p-2" title="View Profile"><i class="ti ti-chevron-right"></i></button>
+                        <button class="btn btn-sm btn-light rounded-circle p-2" title="View Profile" onclick="window.location.href='students-overview.html?id=CS/2021/002'"><i class="ti ti-chevron-right"></i></button>
                     </td>
                   </tr>
-                  <tr class="clickable-row" onclick="window.location.href='student-profile.html?id=CS/2021/003'">
+                  <tr class="clickable-row" onclick="window.location.href='students-overview.html?id=CS/2021/003'">
                     <td class="ps-4">
                         <div class="d-flex align-items-center gap-3">
                             <img src="../assets/images/profile/user-2.jpg" alt="" class="rounded-circle" width="35" height="35">
-                            <span class="fw-bold">Charlie Brown</span>
+                            <span class="fw-medium">Charlie Brown</span>
                         </div>
                     </td>
                     <td><span class="fw-semibold text-gray-700">CS/2021/003</span></td>
                     <td><span class="badge status-badge-absent rounded-pill">Absent</span></td>
                     <td><span class="fw-bold text-primary">20/30</span> <span class="text-muted small">days</span></td>
                     <td class="pe-4 text-end">
-                        <button class="btn btn-sm btn-light rounded-circle p-2" title="View Profile"><i class="ti ti-chevron-right"></i></button>
+                        <button class="btn btn-sm btn-light rounded-circle p-2" title="View Profile" onclick="window.location.href='students-overview.html?id=CS/2021/003'"><i class="ti ti-chevron-right"></i></button>
                     </td>
                   </tr>
-                  <tr class="clickable-row" onclick="window.location.href='student-profile.html?id=CS/2021/004'">
+                  <tr class="clickable-row" onclick="window.location.href='students-overview.html?id=CS/2021/004'">
                     <td class="ps-4">
                         <div class="d-flex align-items-center gap-3">
                             <img src="../assets/images/profile/user-3.jpg" alt="" class="rounded-circle" width="35" height="35">
-                            <span class="fw-bold">Diana Prince</span>
+                            <span class="fw-medium">Diana Prince</span>
                         </div>
                     </td>
                     <td><span class="fw-semibold text-gray-700">CS/2021/004</span></td>
                     <td><span class="badge status-badge-present rounded-pill">Present</span></td>
                     <td><span class="fw-bold text-primary">29/30</span> <span class="text-muted small">days</span></td>
                     <td class="pe-4 text-end">
-                        <button class="btn btn-sm btn-light rounded-circle p-2" title="View Profile"><i class="ti ti-chevron-right"></i></button>
+                        <button class="btn btn-sm btn-light rounded-circle p-2" title="View Profile" onclick="window.location.href='students-overview.html?id=CS/2021/004'"><i class="ti ti-chevron-right"></i></button>
                     </td>
                   </tr>
                 </tbody>

@@ -89,12 +89,6 @@
         <div class="nav-small-cap">Academics</div>
         <ul>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="batches.html">
-              <i class="ti ti-layers-intersect"></i>
-              <span>Batches</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
             <a class="sidebar-link" href="live-sessions.html">
               <i class="ti ti-video"></i>
               <span>Live Sessions</span>
@@ -158,8 +152,8 @@
 
       <main class="main-content">
         <div class="d-flex justify-content-between align-items-center mb-4">
-          <h4 class="fw-bold mb-0">Project Directory</h4>
-          <button class="btn btn-primary fw-semibold rounded-2 px-4 shadow-none">
+          <h4 class="fw-semibold mb-0">Project Directory</h4>
+          <button class="btn btn-primary fw-medium rounded-pill px-4 shadow-none">
             <i class="ti ti-plus me-1"></i> New Project
           </button>
         </div>
@@ -168,10 +162,10 @@
           <div class="col-xl-3 col-md-6">
             <div class="card-modern monitoring-card p-4">
               <div>
-                <p class="text-muted small fw-bold mb-1">Total Projects</p>
-                <h3 class="mb-0">24</h3>
+                <p class="text-muted small fw-medium mb-1">Total Projects</p>
+                <h3 class="mb-0 fw-bold">24</h3>
               </div>
-              <div class="icon-box bg-soft-primary">
+              <div class="icon-box bg-soft-primary text-primary">
                 <i class="ti ti-briefcase fs-6"></i>
               </div>
             </div>
@@ -179,10 +173,10 @@
           <div class="col-xl-3 col-md-6">
             <div class="card-modern monitoring-card p-4">
               <div>
-                <p class="text-muted small fw-bold mb-1">Completed</p>
-                <h3 class="mb-0">18</h3>
+                <p class="text-muted small fw-medium mb-1">Completed</p>
+                <h3 class="mb-0 fw-bold">18</h3>
               </div>
-              <div class="icon-box bg-soft-success">
+              <div class="icon-box bg-soft-success text-success">
                 <i class="ti ti-circle-check fs-6"></i>
               </div>
             </div>
@@ -190,10 +184,10 @@
           <div class="col-xl-3 col-md-6">
             <div class="card-modern monitoring-card p-4">
               <div>
-                <p class="text-muted small fw-bold mb-1">In Progress</p>
-                <h3 class="mb-0">5</h3>
+                <p class="text-muted small fw-medium mb-1">In Progress</p>
+                <h3 class="mb-0 fw-bold">5</h3>
               </div>
-              <div class="icon-box bg-soft-warning">
+              <div class="icon-box bg-soft-warning text-warning">
                 <i class="ti ti-clock fs-6"></i>
               </div>
             </div>
@@ -201,10 +195,10 @@
           <div class="col-xl-3 col-md-6">
             <div class="card-modern monitoring-card p-4">
               <div>
-                <p class="text-muted small fw-bold mb-1">Flagged</p>
-                <h3 class="mb-0">1</h3>
+                <p class="text-muted small fw-medium mb-1">Flagged</p>
+                <h3 class="mb-0 fw-bold">1</h3>
               </div>
-              <div class="icon-box bg-soft-danger">
+              <div class="icon-box bg-soft-danger text-danger">
                 <i class="ti ti-flag fs-6"></i>
               </div>
             </div>
@@ -213,13 +207,13 @@
 
         <!-- Filter Tabs -->
         <div class="d-flex gap-2 mb-4">
-          <span class="badge rounded-pill px-3 py-2 fw-semibold"
+          <span class="badge rounded-pill px-3 py-2 fw-medium"
             style="background-color: var(--primary); color: white; cursor: pointer;">All Projects</span>
-          <span class="badge rounded-pill px-3 py-2 fw-semibold bg-white border text-dark category-pill"
+          <span class="badge rounded-pill px-3 py-2 fw-medium bg-white border text-dark category-pill"
             style="cursor: pointer;">Active</span>
-          <span class="badge rounded-pill px-3 py-2 fw-semibold bg-white border text-dark category-pill"
+          <span class="badge rounded-pill px-3 py-2 fw-medium bg-white border text-dark category-pill"
             style="cursor: pointer;">Under Review</span>
-          <span class="badge rounded-pill px-3 py-2 fw-semibold bg-white border text-dark category-pill"
+          <span class="badge rounded-pill px-3 py-2 fw-medium bg-white border text-dark category-pill"
             style="cursor: pointer;">Completed</span>
         </div>
 
@@ -228,19 +222,19 @@
           <div class="col-xl-4 col-md-6">
             <div class="card-modern project-card h-100 p-4" onclick="window.location.href='project-overview.html'">
               <div class="d-flex justify-content-between align-items-start">
-                <div class="project-icon" style="background-color: #ebf5ff; color: #1e40af;">
+                <div class="project-icon" style="background-color: var(--primary-light); color: var(--primary);">
                   <i class="ti ti-brand-react fs-7"></i>
                 </div>
-                <span class="project-status" style="background-color: #ecfdf5; color: #065f46;">In Progress</span>
+                <span class="project-status" style="background-color: var(--success-light); color: var(--success);">In Progress</span>
               </div>
-              <h5 class="fw-bold mb-1">E-Commerce Platform</h5>
+              <h5 class="fw-semibold mb-1">E-Commerce Platform</h5>
               <p class="text-muted small mb-4">Developing a modern head-less commerce platform using Next.js and Stripe.
               </p>
 
               <div class="mb-4">
                 <div class="d-flex justify-content-between mb-2">
                   <span class="text-muted small">Progress</span>
-                  <span class="fw-bold small">75%</span>
+                  <span class="fw-medium small">75%</span>
                 </div>
                 <div class="progress project-progress">
                   <div class="progress-bar rounded-pill" role="progressbar"
@@ -256,7 +250,7 @@
                     class="team-avatar bg-light text-muted d-flex align-items-center justify-content-center small fw-bold">
                     +4</div>
                 </div>
-                <div class="text-muted small fw-bold">
+                <div class="text-muted small fw-medium">
                   <i class="ti ti-calendar me-1"></i> Oct 15
                 </div>
               </div>
@@ -267,18 +261,18 @@
           <div class="col-xl-4 col-md-6">
             <div class="card-modern project-card h-100 p-4" onclick="window.location.href='project-overview.html'">
               <div class="d-flex justify-content-between align-items-start">
-                <div class="project-icon" style="background-color: #fdf2f2; color: #9b1c1c;">
+                <div class="project-icon" style="background-color: var(--danger-light); color: var(--danger);">
                   <i class="ti ti-shield-lock fs-7"></i>
                 </div>
-                <span class="project-status" style="background-color: #fff7ed; color: #9a3412;">Under Review</span>
+                <span class="project-status" style="background-color: var(--warning-light); color: var(--warning);">Under Review</span>
               </div>
-              <h5 class="fw-bold mb-1">Security Audit Tool</h5>
+              <h5 class="fw-semibold mb-1">Security Audit Tool</h5>
               <p class="text-muted small mb-4">Automated vulnerability scanner for internal server infrastructure.</p>
 
               <div class="mb-4">
                 <div class="d-flex justify-content-between mb-2">
-                  <span class="text-muted small">Progress</span>
-                  <span class="fw-bold small">40%</span>
+                   <span class="text-muted small">Progress</span>
+                  <span class="fw-medium small">40%</span>
                 </div>
                 <div class="progress project-progress">
                   <div class="progress-bar rounded-pill bg-warning" role="progressbar" style="width: 40%;"></div>
@@ -290,7 +284,7 @@
                   <img src="../assets/images/profile/user-1.jpg" class="team-avatar" alt="Team">
                   <img src="../assets/images/profile/user-1.jpg" class="team-avatar" alt="Team">
                 </div>
-                <div class="text-muted small fw-bold">
+                 <div class="text-muted small fw-medium">
                   <i class="ti ti-calendar me-1"></i> Oct 28
                 </div>
               </div>
@@ -301,18 +295,18 @@
           <div class="col-xl-4 col-md-6">
             <div class="card-modern project-card h-100 p-4" onclick="window.location.href='project-overview.html'">
               <div class="d-flex justify-content-between align-items-start">
-                <div class="project-icon" style="background-color: #f0fdf4; color: #166534;">
+                <div class="project-icon" style="background-color: var(--success-light); color: var(--success);">
                   <i class="ti ti-database fs-7"></i>
                 </div>
-                <span class="project-status" style="background-color: #f0fdf4; color: #166534;">Completed</span>
+                <span class="project-status" style="background-color: var(--success-light); color: var(--success);">Completed</span>
               </div>
-              <h5 class="fw-bold mb-1">Data Migration Script</h5>
+              <h5 class="fw-semibold mb-1">Data Migration Script</h5>
               <p class="text-muted small mb-4">Optimized Python scripts for legacy database migration to PostgreSQL.</p>
 
               <div class="mb-4">
                 <div class="d-flex justify-content-between mb-2">
-                  <span class="text-muted small">Progress</span>
-                  <span class="fw-bold small">100%</span>
+                   <span class="text-muted small">Progress</span>
+                  <span class="fw-medium small">100%</span>
                 </div>
                 <div class="progress project-progress">
                   <div class="progress-bar rounded-pill bg-success" role="progressbar" style="width: 100%;"></div>
@@ -323,7 +317,7 @@
                 <div class="d-flex">
                   <img src="../assets/images/profile/user-1.jpg" class="team-avatar" alt="Team">
                 </div>
-                <div class="text-muted small fw-bold">
+                 <div class="text-muted small fw-medium">
                   <i class="ti ti-calendar me-1"></i> Sep 30
                 </div>
               </div>
@@ -335,7 +329,7 @@
 
         <!-- Pagination -->
         <div class="d-flex justify-content-between align-items-center mt-5 border-top pt-4">
-          <span class="text-muted small fw-semibold">Page 1 of 4</span>
+           <span class="text-muted small fw-medium">Page 1 of 4</span>
           <nav>
             <ul class="pagination pagination-sm mb-0">
               <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
