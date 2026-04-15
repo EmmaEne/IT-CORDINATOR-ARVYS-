@@ -90,7 +90,7 @@
         <div class="d-flex align-items-center gap-3">
           <div class="d-flex align-items-center gap-2">
             <span class="fw-semibold" style="font-size: 0.875rem; color: var(--gray-700);">Dr. Denis</span>
-            <img src="../assets/images/profile/user-1.jpg" alt="Admin" class="rounded-circle" width="35" height="35">
+            <img src="../assets/images/profile/admin-headshot.png" alt="Admin" class="rounded-circle" width="35" height="35">
           </div>
           <div class="position-relative" style="cursor: pointer;">
             <i class="ti ti-bell-ringing fs-5 text-gray-600"></i>
@@ -299,7 +299,7 @@
                   <td class="ps-4 fw-semibold text-gray-700">CS/2021/0452</td>
                   <td>
                     <div class="d-flex align-items-center gap-3">
-                      <img src="../assets/images/profile/user-1.jpg" alt="Student" class="rounded-circle" width="30"
+                      <img src="../assets/images/profile/admin-headshot.png" alt="Student" class="rounded-circle" width="30"
                         height="30">
                       <div>
                         <p class="mb-0 fw-medium text-gray-900" style="font-size: 0.85rem;">Johnathan Doe</p>
@@ -324,7 +324,7 @@
                   <td class="ps-4 fw-semibold text-gray-700">CS/2021/0381</td>
                   <td>
                     <div class="d-flex align-items-center gap-3">
-                      <img src="../assets/images/profile/user-1.jpg" alt="Student" class="rounded-circle" width="30"
+                      <img src="../assets/images/profile/admin-headshot.png" alt="Student" class="rounded-circle" width="30"
                         height="30">
                       <div>
                         <p class="mb-0 fw-medium text-gray-900" style="font-size: 0.85rem;">Sarah Jenkins</p>
@@ -385,45 +385,69 @@
     </div>
   </div>
 
+  <!-- Video Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content overflow-hidden border-0 shadow-lg" style="background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border-radius: 20px;">
+        <div class="modal-header border-0 pb-2 px-4 pt-4">
+          <div>
+            <h5 class="modal-title text-white fw-semibold mb-0" id="videoModalTitle">Class Preview</h5>
+            <p class="text-white-50 small mb-0" id="videoModalSubtitle">Live Session</p>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="rounded-4 overflow-hidden shadow-2xl bg-black">
+            <video id="modalVideo" src="" class="w-100 d-block" controls style="max-height: 70vh; outline: none;"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
+    // Video Modal Logic
+    const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
+    const modalVideo = document.getElementById('modalVideo');
+    const modalTitle = document.getElementById('videoModalTitle');
+    const modalSubtitle = document.getElementById('videoModalSubtitle');
+
     document.querySelectorAll('.video-card').forEach(card => {
-      const video = card.querySelector('video');
+      const videoThum = card.querySelector('video');
       const overlay = card.querySelector('.play-overlay');
-      const icon = overlay.querySelector('i');
+      const title = card.querySelector('h6').innerText;
+      const subtitle = card.querySelector('.text-muted.small').innerText;
 
       overlay.addEventListener('click', function(e) {
         e.stopPropagation();
-        if (video.paused) {
-          // Pause all other videos first (optional, but cleaner)
-          document.querySelectorAll('video').forEach(v => {
-            if (v !== video) {
-              v.pause();
-              const otherOverlay = v.parentElement.querySelector('.play-overlay');
-              if (otherOverlay) {
-                otherOverlay.style.opacity = '1';
-                otherOverlay.querySelector('i').classList.replace('ti-player-pause', 'ti-player-play');
-              }
-            }
-          });
-
-          video.play();
-          icon.classList.replace('ti-player-play', 'ti-player-pause');
-          overlay.style.opacity = '0.3';
-        } else {
-          video.pause();
-          icon.classList.replace('ti-player-pause', 'ti-player-play');
-          overlay.style.opacity = '1';
-        }
+        
+        // Pause thumbnail
+        videoThum.pause();
+        
+        // Setup Modal
+        modalVideo.src = videoThum.getAttribute('src');
+        modalTitle.innerText = title;
+        modalSubtitle.innerText = subtitle;
+        
+        // Show Modal
+        videoModal.show();
+        modalVideo.play();
       });
 
-      // Also toggle when clicking the video itself
-      video.style.cursor = 'pointer';
-      video.addEventListener('click', function() {
+      // Also open on card click if needed, or just play overlay
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function() {
         overlay.click();
       });
+    });
+
+    // Cleanup when modal closes
+    document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+      modalVideo.pause();
+      modalVideo.src = "";
     });
 
     // Batch Details Functionality

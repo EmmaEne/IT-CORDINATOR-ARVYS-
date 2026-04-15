@@ -35,7 +35,7 @@
         .circle-bar span {
             position: relative;
             z-index: 1;
-            font-weight: 700;
+            font-weight: 600;
             color: var(--gray-800);
         }
     </style>
@@ -138,14 +138,14 @@
                             <h3 class="mb-1">Ethan Thompson</h3>
                             <p class="text-gray-600 mb-2">School of Computer Science | MT-2024-0452</p>
                             <div class="d-flex gap-2">
-                                <span class="badge bg-soft-success text-success px-3 py-1 rounded-1 fw-bold">Year
+                                <span class="badge bg-soft-success text-success px-3 py-1 rounded-pill fw-medium">Year
                                     3</span>
-                                <span class="badge bg-soft-info text-info px-3 py-1 rounded-1 fw-bold">BSc. Information
+                                <span class="badge bg-soft-info text-info px-3 py-1 rounded-pill fw-medium">BSc. Information
                                     Technology</span>
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-danger px-4 rounded-3 fw-bold d-flex align-items-center gap-2">
+                    <button class="btn btn-outline-danger px-4 rounded-pill fw-medium d-flex align-items-center gap-2">
                         <i class="ti ti-flag"></i> Flag Student
                     </button>
                 </div>
@@ -166,7 +166,7 @@
                     <!-- Stat 1 -->
                     <div class="col-md-4">
                         <div class="card-modern p-4 text-center">
-                            <h6 class="text-muted small fw-bold text-uppercase mb-4">Attendance</h6>
+                            <h6 class="text-muted small fw-medium text-uppercase mb-4">Attendance</h6>
                             <div class="circle-bar mx-auto mb-4" style="--percent: 92%; --primary: var(--success);">
                                 <span>92%</span>
                             </div>
@@ -177,7 +177,7 @@
                     <!-- Stat 2 -->
                     <div class="col-md-4">
                         <div class="card-modern p-4 text-center">
-                            <h6 class="text-muted small fw-bold text-uppercase mb-4">Projects</h6>
+                            <h6 class="text-muted small fw-medium text-uppercase mb-4">Projects</h6>
                             <div class="circle-bar mx-auto mb-4" style="--percent: 80%; --primary: var(--info);">
                                 <span>12</span>
                             </div>
@@ -188,7 +188,7 @@
                     <!-- Stat 3 -->
                     <div class="col-md-4">
                         <div class="card-modern p-4 text-center">
-                            <h6 class="text-muted small fw-bold text-uppercase mb-4">Logbook</h6>
+                            <h6 class="text-muted small fw-medium text-uppercase mb-4">Logbook</h6>
                             <div class="circle-bar mx-auto mb-4" style="--percent: 85%; --primary: var(--warning);">
                                 <span>85%</span>
                             </div>
@@ -207,9 +207,8 @@
                                 <div class="timeline-item">
                                     <div class="d-flex justify-content-between align-items-start mb-2">
                                         <div>
-                                            <span class="text-gray-500 small fw-bold">Oct 12</span>
-                                            <span class="ms-3 badge bg-soft-info text-info rounded-1 fw-bold">100% Day
-                                                Progress</span>
+                                            <span class="text-gray-500 small fw-medium">Oct 12</span>
+                                            <span class="ms-3 badge bg-soft-info text-info rounded-pill fw-medium">100% Day Progress</span>
                                             <h6 class="mt-2 mb-1">Database Migration & Optimization</h6>
                                             <p class="text-muted small mb-0">Completed the migration of user data to the
                                                 new schema and optimized query performance by 30%.</p>
@@ -221,9 +220,8 @@
                                 <div class="timeline-item">
                                     <div class="d-flex justify-content-between align-items-start mb-2">
                                         <div>
-                                            <span class="text-gray-500 small fw-bold">Oct 11</span>
-                                            <span class="ms-3 badge bg-soft-success text-success rounded-1 fw-bold">80%
-                                                Day Progress</span>
+                                            <span class="text-gray-500 small fw-medium">Oct 11</span>
+                                            <span class="ms-3 badge bg-soft-success text-success rounded-pill fw-medium">80% Day Progress</span>
                                             <h6 class="mt-2 mb-1">Frontend Component Refactoring</h6>
                                             <p class="text-muted small mb-0">Refactored the dashboard components for
                                                 better reusability and implemented the new design system tokens.</p>
@@ -235,11 +233,9 @@
                                 <div class="timeline-item">
                                     <div class="d-flex justify-content-between align-items-start mb-2">
                                         <div>
-                                            <span class="text-gray-500 small fw-bold">Oct 10</span>
-                                            <span class="ms-3 badge bg-soft-warning text-warning rounded-1 fw-bold">60%
-                                                Day Progress</span>
-                                            <span class="ms-2 badge bg-soft-danger text-danger rounded-1 fw-bold">Late
-                                                Submission</span>
+                                            <span class="text-gray-500 small fw-medium">Oct 10</span>
+                                            <span class="ms-3 badge bg-soft-warning text-warning rounded-pill fw-medium">60% Day Progress</span>
+                                            <span class="ms-2 badge bg-soft-danger text-danger rounded-pill fw-medium">Late Submission</span>
                                             <h6 class="mt-2 mb-1">Initial Research on ML Models</h6>
                                             <p class="text-muted small mb-0">Conducted research on various machine
                                                 learning models for predictive analysis in student performance.</p>
@@ -263,22 +259,22 @@
                                     2024</p>
                             </div>
 
-                            <h6 class="fw-bold mb-3 mt-4 text-dark">Metrics Overview</h6>
+                            <h6 class="fw-semibold mb-3 mt-4 text-dark">Metrics Overview</h6>
                             <div class="metrics-row d-flex justify-content-between mb-2">
                                 <span class="text-muted small">Engagement Level</span>
                                 <span class="badge bg-soft-success text-success rounded-pill fw-medium">High</span>
                             </div>
                             <div class="metrics-row d-flex justify-content-between mb-2">
                                 <span class="text-muted small">Avg Logbook Score</span>
-                                <span class="fw-bold text-dark small">4.8 / 5.0</span>
+                                <span class="fw-medium text-dark small">4.8 / 5.0</span>
                             </div>
                             <div class="metrics-row d-flex justify-content-between mb-4">
                                 <span class="text-muted small">Projects Done</span>
-                                <span class="fw-bold text-dark small">12 / 15</span>
+                                <span class="fw-medium text-dark small">12 / 15</span>
                             </div>
 
                             <div class="mt-4">
-                                <h6 class="fw-bold mb-3 text-dark">Supervisor Actions</h6>
+                                <h6 class="fw-semibold mb-3 text-dark">Supervisor Actions</h6>
                                 <button class="btn bg-white w-100 mb-2 py-2 d-flex justify-content-between align-items-center rounded-2 shadow-none" style="border: 1px solid var(--border-color);">
                                     <span style="color: var(--primary); font-size: 0.8125rem;">View Attendance Log</span>
                                     <i class="ti ti-chevron-right text-muted"></i>
@@ -288,7 +284,7 @@
                                     <i class="ti ti-chevron-right text-muted"></i>
                                 </button>
 
-                                <h6 class="fw-bold mb-3 text-dark">Observation Notes</h6>
+                                <h6 class="fw-semibold mb-3 text-dark">Observation Notes</h6>
                                 <textarea class="form-control mb-3 shadow-none border" style="background-color: #f8fafc; border-color: #e2e8f0;" rows="3" placeholder="Add private notes..."></textarea>
                                 <button class="btn btn-primary w-100 fw-medium py-2 rounded-2 shadow-none">Save Observations</button>
                             </div>
@@ -299,8 +295,8 @@
                 <div id="attendance" class="tab-section" style="display: none;">
                     <div class="card-modern p-4 mb-4">
                         <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h5 class="fw-bold mb-0">Attendance Detailed Log</h5>
-                            <button class="btn btn-sm btn-outline-primary rounded-2 fw-bold">Export CSV</button>
+                            <h5 class="fw-semibold mb-0">Attendance Detailed Log</h5>
+                            <button class="btn btn-sm btn-outline-primary rounded-pill fw-medium">Export CSV</button>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-middle">
@@ -315,21 +311,21 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="fw-bold">Oct 12, 2026</td>
+                                        <td class="fw-medium">Oct 12, 2026</td>
                                         <td><span class="badge bg-success rounded-pill px-3">Present</span></td>
                                         <td>08:45 AM</td>
                                         <td>04:30 PM</td>
                                         <td class="text-muted small">On time</td>
                                     </tr>
                                     <tr>
-                                        <td class="fw-bold">Oct 11, 2026</td>
+                                        <td class="fw-medium">Oct 11, 2026</td>
                                         <td><span class="badge bg-success rounded-pill px-3">Present</span></td>
                                         <td>08:55 AM</td>
                                         <td>04:45 PM</td>
                                         <td class="text-muted small">On time</td>
                                     </tr>
                                     <tr>
-                                        <td class="fw-bold">Oct 10, 2026</td>
+                                        <td class="fw-medium">Oct 10, 2026</td>
                                         <td><span class="badge bg-warning rounded-pill px-3">Late</span></td>
                                         <td>09:30 AM</td>
                                         <td>05:00 PM</td>
@@ -346,10 +342,10 @@
                         <div class="col-md-6">
                             <div class="card-modern p-4 h-100">
                                 <span class="badge bg-soft-success text-success mb-2">Graded</span>
-                                <h6 class="fw-bold">E-Commerce Frontend UI</h6>
+                                <h6 class="fw-semibold">E-Commerce Frontend UI</h6>
                                 <p class="text-muted small">Submitted: Feb 20, 2026</p>
                                 <div class="d-flex justify-content-between align-items-center mt-4">
-                                    <span class="fw-bold h5 mb-0">95/100</span>
+                                    <span class="fw-semibold h5 mb-0">95/100</span>
                                     <button class="btn btn-sm btn-outline-dark rounded-2">View Feedback</button>
                                 </div>
                             </div>
@@ -357,10 +353,10 @@
                         <div class="col-md-6">
                             <div class="card-modern p-4 h-100">
                                 <span class="badge bg-soft-warning text-warning mb-2">Under Review</span>
-                                <h6 class="fw-bold">Database Schema Design</h6>
+                                <h6 class="fw-semibold">Database Schema Design</h6>
                                 <p class="text-muted small">Submitted: Mar 05, 2026</p>
                                 <div class="d-flex justify-content-between align-items-center mt-4">
-                                    <span class="fw-bold text-muted small">Awaiting Grade</span>
+                                    <span class="fw-medium text-muted small">Awaiting Grade</span>
                                     <button class="btn btn-sm btn-outline-dark rounded-2">Edit Review</button>
                                 </div>
                             </div>
