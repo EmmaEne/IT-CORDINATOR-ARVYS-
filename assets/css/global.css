@@ -1,24 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    /* Primary Colors - Matching DenMatrix reference */
-    --primary: #2563eb;
-    --primary-hover: #1d4ed8;
-    --primary-light: #eff6ff;
-    --primary-rgb: 37, 99, 235;
-    --bs-primary: #2563eb;
+    /* Primary Colors - DenMatrix Brand */
+    --primary: #465fff;
+    --primary-hover: #3a51e0;
+    --primary-light: #ecf3ff;
+    --primary-rgb: 70, 95, 255;
+    --bs-primary: #465fff;
 
-    /* Semantic Colors */
-    --success: #059669;
-    --success-light: #ecfdf5;
-    --warning: #d97706;
-    --warning-light: #fffbeb;
-    --danger: #dc2626;
-    --danger-light: #fef2f2;
-    --info: #0ea5e9;
-    --info-light: #f0f9ff;
+    /* Semantic Colors - DenMatrix palette */
+    --success: #10b981;
+    --success-light: #ecfdf3;
+    --success-dark: #039855;
+    --warning: #f79009;
+    --warning-light: #fffaeb;
+    --danger: #ef4444;
+    --danger-light: #fef3f2;
+    --info: #3080ff;
+    --info-light: #eff6ff;
 
-    /* Neutral Scale */
+    /* Violet accent (DenMatrix secondary) */
+    --violet: #7c3aed;
+    --violet-light: #f5f3ff;
+
+    /* Neutral Scale - DenMatrix grays */
     --gray-50: #f9fafb;
     --gray-100: #f3f4f6;
     --gray-200: #e5e7eb;
@@ -29,33 +34,36 @@
     --gray-700: #374151;
     --gray-800: #1f2937;
     --gray-900: #111827;
+    --gray-950: #030712;
 
     /* Layout */
     --body-bg: #f9fafb;
     --card-bg: #ffffff;
     --sidebar-bg: #ffffff;
 
-    /* Borders & Radius */
+    /* Borders & Radius - DenMatrix uses larger radius */
     --border-color: #e5e7eb;
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
-    --radius-xl: 20px;
-    --radius-2xl: 24px;
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --radius-3xl: 24px;
     --radius-full: 9999px;
 
-    /* Shadows - DenMatrix style: subtle, layered */
-    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+    /* Shadows - DenMatrix style: ultra-subtle, clean */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
 
-    /* Transitions */
-    --transition-fast: 150ms ease;
-    --transition-base: 200ms ease;
-    --transition-slow: 300ms ease;
+    /* Transitions - DenMatrix uses 0.2s */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -67,17 +75,18 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: var(--body-bg);
     color: var(--gray-800);
     line-height: 1.6;
     font-size: 0.875rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: color 0.2s, background-color 0.2s;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
     color: var(--gray-900);
     letter-spacing: -0.025em;
@@ -99,14 +108,14 @@ p {
 a {
     text-decoration: none;
     color: var(--primary);
-    transition: color var(--transition-fast);
+    transition: all var(--transition-base);
 }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 6px; height: 6px; }
+/* Scrollbar - DenMatrix style: ultra-thin */
+::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: var(--gray-400); }
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.1); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.2); }
 
 /* Page Layout */
 .page-wrapper {
@@ -120,6 +129,7 @@ a {
     padding: 2rem 2.5rem;
     overflow-y: auto;
     max-width: 100%;
+    width: 100%;
 }
 
 /* Utility classes */
@@ -143,15 +153,15 @@ a {
     box-shadow: var(--shadow-lg) !important;
 }
 
-/* Form Controls */
+/* Form Controls - DenMatrix style */
 .form-control,
 .form-select {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 0.875rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
     padding: 0.625rem 1rem;
-    transition: all var(--transition-fast);
+    transition: all var(--transition-base);
     color: var(--gray-800);
     background-color: #fff;
 }

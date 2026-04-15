@@ -3,8 +3,6 @@
    Final refinement layer - DenMatrix style
    ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 /* ---- CARD OVERRIDES ---- */
 .card {
     border: 1px solid var(--border-color) !important;
@@ -12,7 +10,7 @@
     box-shadow: var(--shadow-card) !important;
     background-color: var(--card-bg) !important;
     margin-bottom: 1.5rem;
-    transition: box-shadow var(--transition-fast);
+    transition: box-shadow var(--transition-base);
 }
 .card:hover {
     box-shadow: var(--shadow-md) !important;
@@ -32,7 +30,7 @@
     box-shadow: none !important;
 }
 
-/* ---- BADGE SYSTEM ---- */
+/* ---- BADGE SYSTEM - DenMatrix ---- */
 .badge {
     padding: 4px 10px;
     font-weight: 600;
@@ -52,7 +50,7 @@
 .bg-light-danger { background-color: var(--danger-light) !important; color: var(--danger) !important; }
 .bg-light-info { background-color: var(--info-light) !important; color: var(--info) !important; }
 
-/* ---- TABLE SYSTEM ---- */
+/* ---- TABLE SYSTEM - DenMatrix clean ---- */
 .table {
     margin-bottom: 0;
     font-size: 0.8125rem;
@@ -66,7 +64,7 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.6875rem;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
     padding: 0.875rem 1rem;
     white-space: nowrap;
 }
@@ -96,14 +94,14 @@
     -webkit-overflow-scrolling: touch;
 }
 
-/* ---- BUTTON SYSTEM ---- */
+/* ---- BUTTON SYSTEM - DenMatrix ---- */
 .btn {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     border-radius: var(--radius-md);
     padding: 0.5rem 1.125rem;
     font-weight: 600;
     font-size: 0.8125rem;
-    transition: all var(--transition-fast);
+    transition: all var(--transition-base);
     letter-spacing: 0;
     border: 1px solid transparent;
 }
@@ -194,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ---- CATEGORY PILLS ---- */
 .category-pill {
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all var(--transition-base);
     font-size: 0.75rem !important;
     font-weight: 500 !important;
 }
@@ -203,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-1px);
 }
 
-/* ---- PAGINATION ---- */
+/* ---- PAGINATION - DenMatrix ---- */
 .page-link {
     color: var(--gray-600);
     border-radius: var(--radius-sm) !important;
@@ -231,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 .clickable-row,
 .card-clickable {
     cursor: pointer !important;
-    transition: all var(--transition-fast) !important;
+    transition: all var(--transition-base) !important;
 }
 
 .student-row:hover,
@@ -279,4 +277,29 @@ h1, h2, h3, h4, h5, h6 {
     height: 8px;
     border-radius: 50%;
     display: inline-block;
+}
+
+/* ---- BOOTSTRAP COLOR OVERRIDES for DenMatrix ---- */
+.text-success { color: var(--success) !important; }
+.text-danger { color: var(--danger) !important; }
+.text-warning { color: var(--warning) !important; }
+.text-info { color: var(--info) !important; }
+.bg-success { background-color: var(--success) !important; }
+.bg-danger { background-color: var(--danger) !important; }
+.bg-warning { background-color: var(--warning) !important; }
+.bg-info { background-color: var(--info) !important; }
+
+/* ---- ATTENDANCE PAGE OVERRIDES ---- */
+.status-badge-present {
+    background-color: var(--success-light) !important;
+    color: var(--success) !important;
+    font-weight: 700;
+    padding: 6px 12px;
+}
+
+.status-badge-absent {
+    background-color: var(--danger-light) !important;
+    color: var(--danger) !important;
+    font-weight: 700;
+    padding: 6px 12px;
 }
