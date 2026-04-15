@@ -42,7 +42,7 @@
         background-color: #f1f5f9;
     }
     .pagination .active .page-link {
-        background-color: #1e3a8a;
+        background-color: var(--primary);
         color: white;
     }
     .category-pill {
@@ -59,12 +59,9 @@
   <div class="page-wrapper" id="main-wrapper">
     <!-- Sidebar -->
     <aside class="left-sidebar">
-      <div class="brand-logo d-flex align-items-center gap-2">
-        <span class="logo-icon" style="font-size: 1.5rem; font-weight: 800; color: #0f1699; display: flex; align-items: center; gap: 6px;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 20h20L12 2z" fill="#0f1699" stroke="#0f1699" stroke-width="1.5" stroke-linejoin="round"/>
-          </svg>
-          ARVYS
+       <div class="brand-logo d-flex align-items-center gap-2">
+        <span class="logo-icon" style="font-size: 1.5rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 6px;">
+        <img src="../assets/images/logos/logo.svg" alt="" srcset="">
         </span>
       </div>
 
@@ -100,6 +97,12 @@
             </a>
           </li>
           <li class="sidebar-item">
+            <a class="sidebar-link" href="attendance.html">
+              <i class="ti ti-calendar-check"></i>
+              <span>Attendance</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
             <a class="sidebar-link" href="projects.html">
               <i class="ti ti-file-text"></i>
               <span>Projects</span>
@@ -132,7 +135,7 @@
         <div></div>
         <div class="d-flex align-items-center gap-3">
           <div class="d-flex align-items-center gap-2">
-            <span class="fw-semibold" style="font-size: 0.875rem; color: var(--gray-700);">Dr. John Corner</span>
+            <span class="fw-semibold" style="font-size: 0.875rem; color: var(--gray-700);">Dr. Denis</span>
             <img src="../assets/images/profile/user-1.jpg" alt="Admin" class="rounded-circle" width="35" height="35">
           </div>
           <div class="position-relative" style="cursor: pointer;">
@@ -157,7 +160,7 @@
               <button class="btn btn-white border border-light-subtle text-dark d-flex align-items-center gap-2 fw-semibold rounded-2 py-2 px-3 shadow-sm">
                 <i class="ti ti-adjustments-horizontal"></i> Filters
               </button>
-              <button class="btn text-white d-flex align-items-center gap-2 fw-semibold rounded-2 py-2 px-3 shadow-none" style="background-color: #0f1699;">
+              <button class="btn btn-primary d-flex align-items-center gap-2 fw-semibold rounded-2 py-2 px-3 shadow-none">
                 <i class="ti ti-download"></i> Export
               </button>
             </div>
@@ -166,7 +169,7 @@
           <!-- Category Pills -->
           <div class="d-flex flex-wrap gap-2 mb-4">
             <span class="badge rounded-pill px-3 py-2 fw-semibold category-pill" style="background-color: #ebf5ff; color: #1e40af;">All Students (142)</span>
-            <span class="badge rounded-pill px-3 py-2 fw-semibold category-pill border border-danger bg-white" style="color: #b91c1c;">Flagged (5)</span>
+            <span class="badge rounded-pill px-3 py-2 fw-semibold category-pill border border-danger bg-white text-danger">Flagged (5)</span>
             <span class="badge rounded-pill px-3 py-2 fw-semibold category-pill" style="background-color: #fff7ed; color: #9a3412;">Low Attendance (12)</span>
             <span class="badge rounded-pill px-3 py-2 fw-semibold category-pill" style="background-color: #ecfdf5; color: #065f46;">High Performers (24)</span>
           </div>
@@ -191,7 +194,7 @@
                     <div class="d-flex align-items-center">
                       <img src="../assets/images/profile/user-1.jpg" alt="Avatar" class="rounded-circle me-3" width="40" height="40">
                       <div>
-                        <h6 class="mb-0 fw-bold" style="color: #1e3a8a; font-size: 0.9rem;">Ethan Thompson</h6>
+                        <h6 class="mb-0 fw-bold" style="color: var(--primary); font-size: 0.875rem;">Ethan Thompson</h6>
                         <span class="text-muted" style="font-size: 0.75rem;">ethan.t@university.edu</span>
                       </div>
                     </div>
@@ -203,7 +206,7 @@
                   <td>
                     <div class="d-flex align-items-center gap-2">
                       <div class="progress rounded-pill bg-light" style="width: 70px; height: 6px;">
-                        <div class="progress-bar rounded-pill" role="progressbar" style="width: 92%; background-color: #128755;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar rounded-pill" role="progressbar" style="width: 92%; background-color: var(--success);" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                       <span class="text-muted fw-semibold" style="font-size: 0.8rem;">92%</span>
                     </div>
@@ -225,7 +228,7 @@
                     <div class="d-flex align-items-center">
                       <div class="rounded-circle bg-light d-flex align-items-center justify-content-center me-3 fw-bold text-secondary" style="width: 40px; height: 40px; font-size: 0.8rem;">SR</div>
                       <div>
-                        <h6 class="mb-0 fw-bold" style="color: #1e3a8a; font-size: 0.9rem;">Samantha Reed</h6>
+                        <h6 class="mb-0 fw-bold" style="color: var(--primary); font-size: 0.875rem;">Samantha Reed</h6>
                         <span class="text-muted" style="font-size: 0.75rem;">s.reed@university.edu</span>
                       </div>
                     </div>
@@ -259,7 +262,7 @@
                     <div class="d-flex align-items-center">
                       <div class="rounded-circle bg-light d-flex align-items-center justify-content-center me-3 fw-bold text-secondary" style="width: 40px; height: 40px; font-size: 0.8rem;">MC</div>
                       <div>
-                        <h6 class="mb-0 fw-bold" style="color: #1e3a8a; font-size: 0.9rem;">Marcus Chen</h6>
+                        <h6 class="mb-0 fw-bold" style="color: var(--primary); font-size: 0.875rem;">Marcus Chen</h6>
                         <span class="text-muted" style="font-size: 0.75rem;">m.chen@university.edu</span>
                       </div>
                     </div>
